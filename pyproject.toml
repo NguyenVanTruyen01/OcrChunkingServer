@@ -1,0 +1,29 @@
+[project]
+name = "ocr-chunking"
+version = "0.1.0"
+requires-python = ">=3.11"
+
+dependencies = [
+    "fastapi==0.116.2",
+    "uvicorn==0.35.0",
+    "python-dotenv>=1.1.0,<2.0.0",
+    "pydantic-settings==2.10.1",
+    "langchain>=0.3.27",
+    "langchain-community>=0.3.29",
+    "azure-ai-documentintelligence>=1.0.2",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pre-commit==4.0.1",
+    "black==24.10.0",
+    "isort==5.13.2",
+    "flake8==7.1.1",
+    "mypy==1.13.0",
+]
+
+[tool.mypy]
+strict = true
+ignore_missing_imports = true
+disallow_untyped_decorators = false
+allow_subclassing_any = true
